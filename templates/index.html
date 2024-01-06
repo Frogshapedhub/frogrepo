@@ -1,22 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Please, whine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vent</title>
     <style>
-        .center {
+        body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px; /* Adjust this margin as needed for spacing */
+        }
+        div {
+            text-align: center;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px; /* Adjust this margin as needed for spacing */
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            height: 0;
+            padding-bottom: 100%;
+        }
+        button {
+            width: 100%; /* Set the width to 100% of the parent container (div) */
+            height: calc(1/6 * 100%); /* Set the height to 1/6 of the parent container's height */
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <h1 class="center">Please, whine.</h1>
-    <div class="center">
-        <form>
-            <input type="text" name="message" placeholder="Enter your message here">
-        </form>
+    <h1>HELLO VENT</h1>
+    <div>
+        <label for="userInput">Type your vent here:</label>
+        <textarea id="userInput" rows="4" cols="50"></textarea>
+        <button onclick="submitVent()">VENT</button>
+        <p id="output"></p>
     </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
