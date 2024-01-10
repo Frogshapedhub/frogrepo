@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Added meta tags for character set and viewport -->
+    <!-- Added meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Vent</title>
-        <!-- Linked the external CSS file -->
+    <!-- Linked the external CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-<script src="{{ url_for('static', filename='main.js') }}"></script>
-
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </head>
 <body>
     <div class="container">
         <div class="left-box">
-            <h1>HELLO VENT</h1>
+            <div class="title-container">
+                <h1 class="typing-animation">HELLO VENT</h1>
+            </div>
+            <script src="main.js"></script>
         </div>
         <div class="center-box">
             <label for="userInput">Type your vent here:</label>
