@@ -4,19 +4,77 @@ body {
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
-    text-align: center; /* Center text horizontally */
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
 }
 
 h1 {
-    margin: 20px 0; /* Margin around the title */
+    margin: 20px 0;
 }
+
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #333;
+    animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
+}
+
+.typing-animation::after {
+    content: "|"; /* Display the blinking cursor */
+    display: inline-block;
+    width: 1px; /* Width of the cursor */
+    margin-left: 5px; /* Adjust the margin for spacing */
+    animation: blink-caret 0.5s step-end infinite;
+}
+
+
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #333;
+    animation: typing 1s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 1; /* Occupy the entire height of the viewport */
-    margin-left: 20px; /* Adjust margin for space between "HELLO VENT" and the other elements */
+    flex: 1;
+    margin-left: 20px;
 }
 
 .left-box,
@@ -28,15 +86,15 @@ h1 {
 }
 
 .left-box {
-    order: 1; /* Place on the left */
+    order: 1;
 }
 
 .center-box {
-    order: 2; /* Place in the center */
+    order: 2;
 }
 
 .right-box {
-    order: 3; /* Place on the right */
+    order: 3;
 }
 
 label {
@@ -54,6 +112,6 @@ textarea {
 
 button {
     width: 100%;
-    height: calc(1/4 * 100%); /* Set the height to 1/4 of the parent container's height */
+    height: calc(1/4 * 100%);
     box-sizing: border-box;
 }
