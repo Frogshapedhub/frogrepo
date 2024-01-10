@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center; /* Center text horizontally */
+}
+
+h1 {
+    margin: 20px 0; /* Margin around the title */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1; /* Occupy the entire height of the viewport */
+    margin-left: 20px; /* Adjust margin for space between "HELLO VENT" and the other elements */
+}
+
+.left-box,
+.center-box,
+.right-box {
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-box {
+    order: 1; /* Place on the left */
+}
+
+.center-box {
+    order: 2; /* Place in the center */
+}
+
+.right-box {
+    order: 3; /* Place on the right */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+button {
+    width: 100%;
+    height: calc(1/4 * 100%); /* Set the height to 1/4 of the parent container's height */
+    box-sizing: border-box;
+}

@@ -1,51 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Added meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Vent</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            font-family: sans-serif;
-        }
-        h1 {
-            margin-bottom: 20px; /* Adjust this margin as needed for spacing */
-        }
-        div {
-            text-align: center;
-            max-width: 400px;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px; /* Adjust this margin as needed for spacing */
-        }
-        textarea {
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-            height: 0;
-            padding-bottom: 100%;
-        }
-        button {
-            width: 100%; /* Set the width to 100% of the parent container (div) */
-            height: calc(1/6 * 100%); /* Set the height to 1/6 of the parent container's height */
-            box-sizing: border-box;
-        }
-    </style>
+        <!-- Linked the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
 </head>
 <body>
-    <h1>HELLO VENT</h1>
-    <div>
-        <label for="userInput">Type your vent here:</label>
-        <textarea id="userInput" rows="4" cols="50"></textarea>
-        <button onclick="submitVent()">VENT</button>
-        <p id="output"></p>
+    <div class="container">
+        <div class="left-box">
+            <h1>HELLO VENT</h1>
+        </div>
+        <div class="center-box">
+            <label for="userInput">Type your vent here:</label>
+            <textarea id="userInput" rows="4" cols="50"></textarea>
+            <button onclick="submitVent()">VENT</button>
+        </div>
+        <div class="right-box">
+            <p id="output"></p>
+        </div>
     </div>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
