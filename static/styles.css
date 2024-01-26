@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     text-align: center;
+    position: relative; /* Add this for absolute positioning */
 }
 
 .title-container {
@@ -33,15 +34,6 @@ h1 {
     }
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
 @keyframes blink-caret {
     from, to {
         border-color: transparent;
@@ -59,15 +51,14 @@ h1 {
     animation: blink-caret 0.5s step-end infinite;
 }
 
-
-.typing-animation {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #333;
-    animation: typing 1s steps(40, end), blink-caret 0.5s step-end infinite;
+/* Add the Cooperation Link styling */
+.cooperation-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px; /* Adjust as needed */
 }
-
-
 
 .container {
     display: flex;
@@ -132,4 +123,8 @@ button {
     button {
         height: auto; /* Reset the height for better display on small screens */
     }
+}
+
+.serif {
+    font-family: serif;
 }

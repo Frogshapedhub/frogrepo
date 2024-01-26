@@ -15,7 +15,7 @@
             <div class="title-container">
                 <h1 class="typing-animation">HELLO VENT</h1>
             </div>
-            <script src="main.js"></script>
+            <script src="{{ url_for('static', filename='main.js') }}"></script>
         </div>
         <div class="center-box">
             <label for="userInput">Type your vent here:</label>
@@ -27,5 +27,9 @@
         </div>
     </div>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+    <footer>
+        <a href="cooperation.html">Cooperation</a>
+    </footer>
 </body>
 </html>

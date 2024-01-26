@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, jsonify
-import random
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/cooperation')
+def cooperation():
+    return render_template('cooperation.html')
 
 @app.route('/vent', methods=['POST'])
 def vent():
